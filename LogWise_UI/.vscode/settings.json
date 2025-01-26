@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/81593e7b-e6fe-4471-8b17-92756a1da152/resourceGroups/Document_Search_Bot/providers/Microsoft.Web/sites/Query-Bot-UI",
+    "appService.deploySubpath": "."
+}

@@ -1,0 +1,260 @@
+/* ChatBox.css */
+.chatbox-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.side-nav-left {
+  background-color: goldenrod;
+}
+
+.chat-container {
+  flex: 3;
+  background-color: lightgoldenrodyellow;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.chat-history {
+  height: 490px;
+  overflow-y: scroll;
+  padding: 20px;
+  background-color: silver;
+}
+
+.message {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.user {
+  background-color: rgb(240, 248, 255);
+  color: black;
+  margin-left: auto;
+}
+
+.system {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  width: fit-content;
+  margin-right: auto;
+  max-width: 75%;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center; /* Align items horizontally */
+  padding: 15px;
+  background-color: #f5f5f5;
+  width: 100%;
+  margin-bottom: 20px; /* Adds space below the chat input container */
+}
+
+input[type="file"] {
+  padding: 12px;
+  margin-right: 10px; /* Adds space between file input and the button */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  width: 250px;
+  align-content: center;
+}
+
+.center {
+  height: 10vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background: silver;
+}
+
+.wave {
+  width: 5px;
+  height: 50px;
+  background: linear-gradient(45deg, white, white);
+  margin: 1px;
+  animation: wave 1s linear infinite;
+  border-radius: 5px;
+}
+
+.wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.wave:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.wave:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.wave:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.wave:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.wave:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+/* Added styles for the form elements */
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.upload-message {
+  font-size: 14px;
+  color: silver;
+}
+
+.uploaded-file-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.uploaded-file-info p {
+  margin-right: 10px;
+  font-size: 14px;
+  color: silver;
+}
+
+.file-upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+#uploadProgress {
+  width: 100%;
+  height: 5px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#uploadProgressBar {
+  width: 0%;
+  height: 100%;
+  background-color: lightgoldenrodyellow;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+.analysis-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.analysis-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.analysis-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.analysis-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  text-align: center;
+}
+
+.analysis-table tr {
+  background-color: #f9f9f9;
+}
+
+.analysis-table tr:hover {
+  background-color: lightgoldenrodyellow;
+}
+
+.analysis-table td {
+  vertical-align: top;
+  word-wrap: break-word;
+}
+
+.error-count-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.error-count-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.error-count-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.error-count-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error-count-table tr {
+  background-color: #f9f9f9;
+}
+
+.error-count-table tr:hover {
+  background-color: lightgoldenrodyellow;
+}
+
+.error-count-table td {
+  vertical-align: top;
+  word-wrap: break-word;
+}
+
+/* Style for the Log Table label with bold text and solid border */
+.log-table-label {
+  font-weight: bold; /* Make text bold */
+  border: 2px solid black; /* Solid black border with 2px thickness */
+  padding: 10px; /* Add space inside the box */
+  border-radius: 2px; /* Optional: Rounded corners for the box */
+  display: inline-block; /* Make sure the box wraps around the text */
+}

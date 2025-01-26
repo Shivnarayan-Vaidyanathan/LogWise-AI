@@ -1,0 +1,40 @@
+2025-01-25 14:35:18.432 ERROR [DatabaseConnection] Unable to connect to database.
+Error Code: 08001
+Message: SQL Server Network Interfaces: Error Locating Server/Instance Specified
+Stack Trace:
+  at Database.Connect(String connectionString) in C:\Project\Source\Database.cs:line 112
+  at Program.Main(String[] args) in C:\Project\Source\Program.cs:line 24
+
+2025-01-25 14:37:22.563 ERROR [ApiService] System.NullReferenceException: Object reference not set to an instance of an object.
+   at ApiService.ProcessRequest(HttpRequest request) in C:\Services\ApiService.cs:line 89
+   at Controller.HandlePostRequest(HttpRequest request) in C:\Controllers\Controller.cs:line 45
+
+2025-04-15 14:39:07.892 WARN [HttpClient] Request to external service timed out.
+Error Code: 08201
+URL: https://api.example.com/v1/data
+Timeout Duration: 30 seconds
+Request ID: 874e3d9c-2f4b-4b88-8219-b45c9c711abc
+Stack Trace:
+  at HttpClient.GetResponse(String url) in C:\Utils\HttpClient.cs:line 75
+
+2023-12-20 14:41:15.654 ERROR [FileHandler] FileNotFoundException: File "data.csv" not found.
+Error Code: 0800110
+Path: C:\Data\input\data.csv
+Stack Trace:
+   at FileHandler.ReadFile(String path) in C:\Handlers\FileHandler.cs:line 35
+   at Program.RunFileProcessing() in C:\Program.cs:line 60
+
+2024-01-25 14:43:01.237 ERROR [AuthService] UnauthorizedAccessException: Invalid credentials provided.
+Error Code: 09001
+User: admin@example.com
+Request ID: b7c2e0f5-53f3-4578-98a7-8ddce4f71a56
+Stack Trace:
+   at AuthService.Authenticate(String username, String password) in C:\Auth\AuthService.cs:line 48
+   at Controller.LoginUser(HttpRequest request) in C:\Controllers\LoginController.cs:line 32
+
+2024-01-25 14:45:39.102 FATAL [MemoryManager] OutOfMemoryException: Memory usage exceeded the allowed threshold of 2GB.
+Error Code: 05675
+Current Usage: 2.3GB
+Stack Trace:
+   at MemoryManager.AllocateMemory(Int32 size) in C:\Memory\MemoryManager.cs:line 68
+   at TaskProcessor.ProcessTask(Task task) in C:\Processor\TaskProcessor.cs:line 90

@@ -1,0 +1,37 @@
+2024-05-18 09:12:43.123 ERROR [NetworkManager] Unable to resolve DNS. Error Code: 07002
+Message: DNS server is unavailable.
+Stack Trace:
+    at NetworkManager.ResolveHost(String hostname) in C:\Network\NetworkManager.cs:line 105
+    at Program.Main(String[] args) in C:\Project\Source\Program.cs:line 50
+
+2024-03-10 10:45:27.451
+Error Code: 09522
+Transaction ID: a3d9fe12-ff24-431b-9e88-cb3a972ab203
+Stack Trace:
+    at PaymentGateway.SendRequest(Request request) in C:\Payments\PaymentGateway.cs:line 70
+    at PaymentService.ProcessPayment(PaymentRequest paymentRequest) in C:\Services\PaymentService.cs:line 130
+
+2023-11-11 16:28:12.889 WARN [CacheService] Cache limit exceeded.
+Error Code: 04322
+Current Cache Size: 1.5GB
+Max Allowed Size: 1GB
+Stack Trace:
+    at CacheService.AddToCache(Object item) in C:\Services\CacheService.cs:line 85
+    at DataService.LoadData(Object query) in C:\Services\DataService.cs:line 48
+
+2023-08-01 07:33:57.223 FATAL [Scheduler] NullReferenceException: Task scheduler encountered a null task.
+Error Code: 07890
+Stack Trace:
+    at Scheduler.ScheduleTask(Task task) in C:\Scheduler\Scheduler.cs:line 32
+    at Program.RunTasks() in C:\Program.cs:line 120
+
+2025-02-20 11:58:43.776 ERROR [ApiHandler] InvalidCastException: Unable to cast object of type System.String to System.Int32.
+Error Code: 08112
+Endpoint: /api/data/process
+Request ID: 98eb34cd-a6b1-40dd-8f82-6dc9f6b62a22
+Stack Trace:
+    at ApiHandler.ProcessData(Object input) in C:\Handlers\ApiHandler.cs:line 77
+    at Controller.HandlePostRequest(HttpRequest request) in C:\Controllers\ApiController.cs:line 50
+
+2025-06-10 13:14:23.512
+Error Code: 09999
