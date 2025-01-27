@@ -21,6 +21,13 @@ def analyze_log_data():
 
         if not file_content:
             return jsonify({"error": "No file content provided."}), 400
+        
+        if len(file_content.strip()) == 0:
+            return jsonify({"error": "The uploaded log file is empty."}), 400
+
+        # Check if parsed_log_data has valid log entries
+        if not parsed_log_data or len(parsed_log_data) == 0:
+            return jsonify({"error": "No valid log entries found in the uploaded file."}), 400
 
         # Generate descriptions for each error entry
         descriptions = []
