@@ -154,9 +154,11 @@ const ChatBox = () => {
         ]);
       }
     } catch (error) {
+      // Check if the error has a response, and display the backend error message
+      const errorMessage = error.response?.data?.error || `Error analyzing the log data: ${error.message}`;
       setMessages((prevMessages) => [
         ...prevMessages,
-        { txt: `Error analyzing the log data: ${error.message}`, type: "system" },
+        { txt: errorMessage, type: "system" }, // Display the error from the backend
       ]);
     }
   
@@ -165,7 +167,7 @@ const ChatBox = () => {
     const fileInput = document.getElementById("fileInput"); // Access the file input by its ID
     if (fileInput) fileInput.value = ""; // Reset the file input
     setLoading(false);
-  };  
+  };    
 
   const renderAnalysisTable = () => {
     if (!analysisData || analysisData.length === 0) {
